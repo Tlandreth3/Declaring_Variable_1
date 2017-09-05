@@ -43,14 +43,30 @@ namespace Declaring_Variables_1
             // Data conversion
 
             int x = 7;
-            string y = "Trace";
+            //string y = "Trace";
+            string y = "5"; //This can be converted into a string
             string myFirstTry = x.ToString() + y;
 
             //.NET IS smart enough to cancatinate the integer 7 into a string that says "7"
 
-            int myScondTry = x + y;
+            //int myScondTry = x + y;
+            //.NET cannot explicitly express string y as an integer
+            //Cs is a strongly typed language - explicit data types
+
+            //int mySecondTry = x + int.Parse(y);
+            //this wouldn't work because string y cannot be converted into an int
+
+            int mySecondTry = x + int.Parse(y);
+
+
             Console.WriteLine(myFirstTry);
-			
+                   
+
+
+            //Try to avoid IMPLICIT data conversions - use explicit ones
+
+                
+    			
 
 			
 
